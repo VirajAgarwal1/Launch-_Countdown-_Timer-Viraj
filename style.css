@@ -465,7 +465,7 @@ body {
         bottom: 0%;
         height: 15vh;
         align-items: center;
-        background-image: url('/home/mylaptop/Coding/Challenges /Challenge 4/launch-countdown-timer-main/images/pattern-hills.svg');
+        background-image: url('https://virajagarwal1.github.io/Launch-_Countdown-_Timer-Viraj/pattern-hills.svg');
     }
     #fbLOGO {
         grid-column: 2/3;
@@ -944,7 +944,7 @@ body {
         bottom: 0%;
         height: 15vh;
         align-items: center;
-        background-image: url('pattern-hills.svg');
+        background-image: url('https://virajagarwal1.github.io/Launch-_Countdown-_Timer-Viraj/pattern-hills.svg');
     }
     #fbLOGO {
         grid-column: 2/3;
