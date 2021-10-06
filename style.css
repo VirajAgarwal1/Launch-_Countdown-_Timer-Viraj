@@ -944,7 +944,7 @@ body {
         bottom: 0%;
         height: 15vh;
         align-items: center;
-        background-image: url('images/pattern-hills.jpg');
+        background-image: url('pattern-hills.svg');
     }
     #fbLOGO {
         grid-column: 2/3;
