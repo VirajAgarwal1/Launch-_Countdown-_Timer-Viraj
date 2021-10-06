@@ -465,8 +465,8 @@ body {
         bottom: 0%;
         height: 15vh;
         align-items: center;
-        background-size: 100% 100%;
-        background-image: url('https://virajagarwal1.github.io/Launch-_Countdown-_Timer-Viraj/pattern-hills.svg');
+        /* background-size: 100% 100%; */
+        background-image: url(pattern-hills.svg);
     }
     #fbLOGO {
         grid-column: 2/3;
