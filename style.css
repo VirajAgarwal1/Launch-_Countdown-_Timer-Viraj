@@ -630,7 +630,7 @@ body {
     #days .lower_number {
         text-align: center;  
         margin: auto 0;
-        transform: translateY(-1.14ch);
+        transform: translateY(-1.1ch);
     }
     #days .upper_number {
         text-align: center;
@@ -723,7 +723,7 @@ body {
     #hours .lower_number {
         text-align: center;  
         margin: auto 0;
-        transform: translateY(-1.14ch);
+        transform: translateY(-1.1ch);
     }
     #hours .upper_number {
         text-align: center;
@@ -817,7 +817,7 @@ body {
     #minutes .lower_number {
         text-align: center;  
         margin: auto 0;
-        transform: translateY(-1.14ch);
+        transform: translateY(-1.1ch);
     }
     #minutes .upper_number {
         text-align: center;
@@ -909,7 +909,7 @@ body {
     #seconds .lower_number {
         text-align: center;  
         margin: auto 0;
-        transform: translateY(-1.14ch);
+        transform: translateY(-1.1ch);
     }
     #seconds .upper_number {
         text-align: center;
