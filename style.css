@@ -5,7 +5,7 @@
 body {
     background-color: hsl(235, 16%, 14%);
     color: hsl(0, 0%, 100%);
-    background-image: url('/home/mylaptop/GitHub/Launch-_Countdown-_Timer-Viraj/images/bg-stars.svg');
+    background-image: url('images/bg-stars.svg');
 }
 
 @media only screen and (min-width: 780px)  {
@@ -944,7 +944,7 @@ body {
         bottom: 0%;
         height: 15vh;
         align-items: center;
-        background-image: url('/home/mylaptop/Coding/Challenges /Challenge 4/launch-countdown-timer-main/images/pattern-hills.svg');
+        background-image: url('images/pattern-hills.svg');
     }
     #fbLOGO {
         grid-column: 2/3;
