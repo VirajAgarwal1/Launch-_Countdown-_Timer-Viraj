@@ -514,8 +514,8 @@ body {
         position: absolute;
         left: 0%;
         bottom: 0%;
-        width: 0.5vw;
-        height: 0.5vw;
+        width: 1.5vw;
+        height: 1.5vw;
         background-color: hsl(234, 17%, 12%);
         border-radius: 0% 100% 100% 0% / 0% 100% 0% 100% ;
     }
@@ -523,8 +523,8 @@ body {
         position: absolute;
         right: 0%;
         bottom: 0%;
-        width: 0.5vw;
-        height: 0.5vw;
+        width: 1.5vw;
+        height: 1.5vw;
         background-color: hsl(234, 17%, 12%);
         border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%  ;
     }
@@ -532,8 +532,8 @@ body {
         position: absolute;
         left: 0%;
         top: 0%;
-        width: 0.5vw;
-        height: 0.5vw;
+        width: 1.5vw;
+        height: 1.5vw;
         background-color: hsl(234, 17%, 12%);
         border-radius: 100% 0% 100% 0% / 0% 0% 100% 100% ;
     }
@@ -541,8 +541,8 @@ body {
         position: absolute;
         right: 0%;
         top: 0%;
-        width: 0.5vw;
-        height: 0.5vw;
+        width: 1.5vw;
+        height: 1.5vw;
         background-color: hsl(234, 17%, 12%);
         border-radius: 100% 0% 0% 100% / 0% 100% 0% 100% ;
     }
@@ -940,7 +940,7 @@ body {
         display: grid;
         grid-template-columns: 1fr repeat(3, minmax(24px ,3vw)) 1fr;
         grid-template-rows: 1fr;
-        column-gap: 1vw;
+        column-gap: 3.5vw;
         position: absolute;
         bottom: 0%;
         height: 15vh;
