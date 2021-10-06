@@ -1,0 +1,967 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+body {
+    background-color: hsl(235, 16%, 14%);
+    color: hsl(0, 0%, 100%);
+    background-image: url('/home/mylaptop/Coding/Challenges /Challenge 4/launch-countdown-timer-main/images/bg-stars.svg');
+}
+
+@media only screen and (min-width: 780px)  {
+
+    #header{
+        color: hsl(0, 0%, 100%);
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 0.2ch;
+        font-size: 2vw;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 1.6em;
+        margin-bottom: 1.6em;
+    }
+    #countdown {
+        height: 10vw;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 10vw);
+        grid-template-rows: 10vw;
+        column-gap: 1vw;
+    }
+    .crop1 {
+        position: absolute;
+        left: 0%;
+        bottom: 0%;
+        width: 0.5vw;
+        height: 0.5vw;
+        background-color: hsl(234, 17%, 12%);
+        border-radius: 0% 100% 100% 0% / 0% 100% 0% 100% ;
+    }
+    .crop2 {
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+        width: 0.5vw;
+        height: 0.5vw;
+        background-color: hsl(234, 17%, 12%);
+        border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%  ;
+    }
+    .crop3{
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        width: 0.5vw;
+        height: 0.5vw;
+        background-color: hsl(234, 17%, 12%);
+        border-radius: 100% 0% 100% 0% / 0% 0% 100% 100% ;
+    }
+    .crop4{
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        width: 0.5vw;
+        height: 0.5vw;
+        background-color: hsl(234, 17%, 12%);
+        border-radius: 100% 0% 0% 100% / 0% 100% 0% 100% ;
+    }
+    
+    /* days */
+    #days{
+        border-radius: 20px;
+        background-color: hsl(234, 17%, 12%);
+        width: 10vw;
+        height: 100%;
+        position: relative;
+        font-size: 7.5vw;
+        font-weight: 700;
+        perspective: 500px;
+        color: hsl(345, 95%, 68%);
+    }
+    #days .id1 {
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 0%;
+        align-items: center;
+        z-index: 5;
+        overflow: hidden;   
+    }
+    #days .id2 {
+        position: relative;
+        width: 100%;
+        height: 45%;
+        top: 0%;
+        border-radius: 20px 20px 0 0 ;
+        z-index: 10;
+        border-bottom: 2px solid hsl(234, 17%, 12%);
+        /* animation-name: DaysTimerMoving; */
+        animation-timing-function: ease-out;
+        animation-duration: 1000ms;
+        transform-origin: 100% 100%;
+        transform-style: preserve-3d;
+    }
+    @keyframes DaysTimerMoving {  
+        100% {
+            transform: rotateX(-180deg) translateY(1px);
+        }
+    }
+    @keyframes DaysTimerIdle {
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+    #days .id2 .front_number_upper {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        transform: translateZ(1px);
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        /* background-color: darkgreen; */
+        overflow: hidden;
+    }
+    #days .id2 .back_number_lower {
+        position: absolute;
+        top: 0px;
+        width: calc(100% - 1px);
+        height: 100%;
+        transform: translateZ(-1px) rotateX(180deg);
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        /* background-color: darkorange; */
+        overflow: hidden;
+    }
+    #days .id3 {
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 45%;
+        z-index: 7;
+        overflow: hidden;
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        border-top: 2px solid hsl(234, 17%, 12%);
+    }
+    #days .lower_number {
+        text-align: center;  
+        margin: auto 0;
+        transform: translateY(-1.14ch);
+    }
+    #days .upper_number {
+        text-align: center;
+        margin: auto 0;
+        transform: translateY(0.1ch);
+    }
+    
+    
+    
+    /* hours */
+    #hours{
+        border-radius: 20px;
+        background-color: hsl(234, 17%, 12%);
+        width: 10vw;
+        height: 100%;
+        position: relative;
+        font-size: 7.5vw;
+        font-weight: 700;
+        perspective: 500px;
+        color: hsl(345, 95%, 68%);
+    }
+    #hours .id1 {
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 0%;
+        align-items: center;
+        z-index: 5;
+        overflow: hidden;   
+    }
+    #hours .id2 {
+        position: relative;
+        width: 100%;
+        height: 45%;
+        top: 0%;
+        border-radius: 20px 20px 0 0 ;
+        z-index: 10;
+        border-bottom: 2px solid hsl(234, 17%, 12%);
+        /* animation-name: HoursTimerMoving; */
+        animation-timing-function: ease-out;
+        animation-duration: 1000ms;
+        transform-origin: 100% 100%;
+        transform-style: preserve-3d;
+    }
+    @keyframes HoursTimerMoving {  
+        100% {
+            transform: rotateX(-180deg) translateY(1px);
+        }
+    }
+    @keyframes HoursTimerIdle {
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+    #hours .id2 .front_number_upper {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        transform: translateZ(1px);
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        /* background-color: darkgreen; */
+        overflow: hidden;
+    }
+    #hours .id2 .back_number_lower {
+        position: absolute;
+        top: 0px;
+        width: calc(100% - 1px);
+        height: 100%;
+        transform: translateZ(-1px) rotateX(180deg);
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        /* background-color: darkorange; */
+        overflow: hidden;
+    }
+    #hours .id3 {
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 45%;
+        z-index: 7;
+        overflow: hidden;
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        border-top: 2px solid hsl(234, 17%, 12%);
+    }
+    #hours .lower_number {
+        text-align: center;  
+        margin: auto 0;
+        transform: translateY(-1.14ch);
+    }
+    #hours .upper_number {
+        text-align: center;
+        margin: auto 0;
+        transform: translateY(0.1ch);
+    }
+    
+    
+    
+    
+    /* minutes */
+    #minutes{
+        border-radius: 20px;
+        background-color: hsl(234, 17%, 12%);
+        width: 10vw;
+        height: 100%;
+        position: relative;
+        font-size: 7.5vw;
+        font-weight: 700;
+        perspective: 500px;
+        color: hsl(345, 95%, 68%);
+    }
+    #minutes .id1 {
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 0%;
+        align-items: center;
+        z-index: 5;
+        overflow: hidden;   
+    }
+    #minutes .id2 {
+        position: relative;
+        width: 100%;
+        height: 45%;
+        top: 0%;
+        border-radius: 20px 20px 0 0 ;
+        z-index: 10;
+        border-bottom: 2px solid hsl(234, 17%, 12%);
+        /* animation-name: MinutesTimerMoving; */
+        animation-timing-function: ease-out;
+        animation-duration: 1000ms;
+        transform-origin: 100% 100%;
+        transform-style: preserve-3d;
+    }
+    @keyframes MinutesTimerMoving {  
+        100% {
+            transform: rotateX(-180deg) translateY(1px);
+        }
+    }
+    @keyframes MinutesTimerIdle {
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+    #minutes .id2 .front_number_upper {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        transform: translateZ(1px);
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        /* background-color: darkgreen; */
+        overflow: hidden;
+    }
+    #minutes .id2 .back_number_lower {
+        position: absolute;
+        top: 0px;
+        width: calc(100% - 1px);
+        height: 100%;
+        transform: translateZ(-1px) rotateX(180deg);
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        /* background-color: darkorange; */
+        overflow: hidden;
+    }
+    #minutes .id3 {
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 45%;
+        z-index: 7;
+        overflow: hidden;
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        border-top: 2px solid hsl(234, 17%, 12%);
+    }
+    #minutes .lower_number {
+        text-align: center;  
+        margin: auto 0;
+        transform: translateY(-1.14ch);
+    }
+    #minutes .upper_number {
+        text-align: center;
+        margin: auto 0;
+        transform: translateY(0.1ch);
+    }
+    
+    
+    /* seconds */
+    #seconds{
+        border-radius: 20px;
+        background-color: hsl(234, 17%, 12%);
+        width: 10vw;
+        height: 100%;
+        position: relative;
+        font-size: 7.5vw;
+        font-weight: 700;
+        perspective: 500px;
+        color: hsl(345, 95%, 68%);
+    }
+    #seconds .id1 {
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 0%;
+        align-items: center;
+        z-index: 5;
+        overflow: hidden;   
+    }
+    #seconds .id2 {
+        position: relative;
+        width: 100%;
+        height: 45%;
+        top: 0%;
+        border-radius: 20px 20px 0 0 ;
+        z-index: 10;
+        border-bottom: 2px solid hsl(234, 17%, 12%);
+        /* animation-name: SecondsTimerMoving; */
+        animation-timing-function: ease-out;
+        animation-duration: 400ms;
+        transform-origin: 100% 100%;
+        transform-style: preserve-3d;
+    }
+    @keyframes SecondsTimerMoving {  
+        100% {
+            transform: rotateX(-180deg) translateY(1px);
+        }
+    }
+    @keyframes SecondsTimerIdle {
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+    #seconds .id2 .front_number_upper {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        transform: translateZ(1px);
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        /* background-color: darkgreen; */
+        overflow: hidden;
+    }
+    #seconds .id2 .back_number_lower {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        transform: translateZ(-1px) rotateX(180deg);
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        /* background-color: darkorange; */
+        overflow: hidden;
+    }
+    #seconds .id3 {
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 45%;
+        z-index: 7;
+        overflow: hidden;
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        border-top: 2px solid hsl(234, 17%, 12%);
+    }
+    #seconds .lower_number {
+        text-align: center;  
+        margin: auto 0;
+        transform: translateY(-1.14ch);
+    }
+    #seconds .upper_number {
+        text-align: center;
+        margin: auto 0;
+        transform: translateY(0.1ch);
+    }
+    
+    
+    #markings{
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1vw;
+        display: grid;
+        grid-template-columns: repeat(4, 10vw);
+        grid-template-rows: 1fr;
+        column-gap: 1vw;
+        font-size: 1vw;
+        color: hsla(0, 0%, 100%, 0.678);
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    
+    /* This is the footer region */
+    #footer{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr repeat(3, minmax(24px ,3vw)) 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 1vw;
+        position: absolute;
+        bottom: 0%;
+        height: 15vh;
+        align-items: center;
+        background-image: url('/home/mylaptop/Coding/Challenges /Challenge 4/launch-countdown-timer-main/images/pattern-hills.svg');
+    }
+    #fbLOGO {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    #pnLOGO {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    #igLOGO {
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+    #footer svg:hover {
+        cursor: pointer;
+    }
+    #footer svg:hover path{
+        fill:#fb6087;
+    } 
+}
+
+@media only screen and (max-width: 779px) {
+
+    #header{
+        color: hsl(0, 0%, 100%);
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 0.2ch;
+        font-size: 4vw;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 1.6em;
+        margin-bottom: 1.6em;
+    }
+    #countdown {
+        height: 10vw;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 20vw);
+        grid-template-rows: 20vw;
+        column-gap: 3vw;
+    }
+    .crop1 {
+        position: absolute;
+        left: 0%;
+        bottom: 0%;
+        width: 0.5vw;
+        height: 0.5vw;
+        background-color: hsl(234, 17%, 12%);
+        border-radius: 0% 100% 100% 0% / 0% 100% 0% 100% ;
+    }
+    .crop2 {
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+        width: 0.5vw;
+        height: 0.5vw;
+        background-color: hsl(234, 17%, 12%);
+        border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%  ;
+    }
+    .crop3{
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        width: 0.5vw;
+        height: 0.5vw;
+        background-color: hsl(234, 17%, 12%);
+        border-radius: 100% 0% 100% 0% / 0% 0% 100% 100% ;
+    }
+    .crop4{
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        width: 0.5vw;
+        height: 0.5vw;
+        background-color: hsl(234, 17%, 12%);
+        border-radius: 100% 0% 0% 100% / 0% 100% 0% 100% ;
+    }
+
+    /* days */
+    #days{
+        border-radius: 20px;
+        background-color: hsl(234, 17%, 12%);
+        width: 20vw;
+        height: 100%;
+        position: relative;
+        font-size: 15vw;
+        font-weight: 700;
+        perspective: 500px;
+        color: hsl(345, 95%, 68%);
+    }
+    #days .id1 {
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 0%;
+        align-items: center;
+        z-index: 5;
+        overflow: hidden;   
+    }
+    #days .id2 {
+        position: relative;
+        width: 100%;
+        height: 45%;
+        top: 0%;
+        border-radius: 20px 20px 0 0 ;
+        z-index: 10;
+        border-bottom: 2px solid hsl(234, 17%, 12%);
+        /* animation-name: DaysTimerMoving; */
+        animation-timing-function: ease-out;
+        animation-duration: 1000ms;
+        transform-origin: 100% 100%;
+        transform-style: preserve-3d;
+    }
+    @keyframes DaysTimerMoving {  
+        100% {
+            transform: rotateX(-180deg) translateY(1px);
+        }
+    }
+    @keyframes DaysTimerIdle {
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+    #days .id2 .front_number_upper {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        transform: translateZ(1px);
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        /* background-color: darkgreen; */
+        overflow: hidden;
+    }
+    #days .id2 .back_number_lower {
+        position: absolute;
+        top: 0px;
+        width: calc(100% - 1px);
+        height: 100%;
+        transform: translateZ(-1px) rotateX(180deg);
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        /* background-color: darkorange; */
+        overflow: hidden;
+    }
+    #days .id3 {
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 45%;
+        z-index: 7;
+        overflow: hidden;
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        border-top: 2px solid hsl(234, 17%, 12%);
+    }
+    #days .lower_number {
+        text-align: center;  
+        margin: auto 0;
+        transform: translateY(-1.14ch);
+    }
+    #days .upper_number {
+        text-align: center;
+        margin: auto 0;
+        transform: translateY(0.1ch);
+    }
+
+
+
+    /* hours */
+    #hours{
+        border-radius: 20px;
+        background-color: hsl(234, 17%, 12%);
+        width: 20vw;
+        height: 100%;
+        position: relative;
+        font-size: 15vw;
+        font-weight: 700;
+        perspective: 500px;
+        color: hsl(345, 95%, 68%);
+    }
+    #hours .id1 {
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 0%;
+        align-items: center;
+        z-index: 5;
+        overflow: hidden;   
+    }
+    #hours .id2 {
+        position: relative;
+        width: 100%;
+        height: 45%;
+        top: 0%;
+        border-radius: 20px 20px 0 0 ;
+        z-index: 10;
+        border-bottom: 2px solid hsl(234, 17%, 12%);
+        /* animation-name: HoursTimerMoving; */
+        animation-timing-function: ease-out;
+        animation-duration: 1000ms;
+        transform-origin: 100% 100%;
+        transform-style: preserve-3d;
+    }
+    @keyframes HoursTimerMoving {  
+        100% {
+            transform: rotateX(-180deg) translateY(1px);
+        }
+    }
+    @keyframes HoursTimerIdle {
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+    #hours .id2 .front_number_upper {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        transform: translateZ(1px);
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        /* background-color: darkgreen; */
+        overflow: hidden;
+    }
+    #hours .id2 .back_number_lower {
+        position: absolute;
+        top: 0px;
+        width: calc(100% - 1px);
+        height: 100%;
+        transform: translateZ(-1px) rotateX(180deg);
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        /* background-color: darkorange; */
+        overflow: hidden;
+    }
+    #hours .id3 {
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 45%;
+        z-index: 7;
+        overflow: hidden;
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        border-top: 2px solid hsl(234, 17%, 12%);
+    }
+    #hours .lower_number {
+        text-align: center;  
+        margin: auto 0;
+        transform: translateY(-1.14ch);
+    }
+    #hours .upper_number {
+        text-align: center;
+        margin: auto 0;
+        transform: translateY(0.1ch);
+    }
+
+
+
+
+    /* minutes */
+    #minutes{
+        border-radius: 20px;
+        background-color: hsl(234, 17%, 12%);
+        width: 20vw;
+        height: 100%;
+        position: relative;
+        font-size: 15vw;
+        font-weight: 700;
+        perspective: 500px;
+        color: hsl(345, 95%, 68%);
+    }
+    #minutes .id1 {
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 0%;
+        align-items: center;
+        z-index: 5;
+        overflow: hidden;   
+    }
+    #minutes .id2 {
+        position: relative;
+        width: 100%;
+        height: 45%;
+        top: 0%;
+        border-radius: 20px 20px 0 0 ;
+        z-index: 10;
+        border-bottom: 2px solid hsl(234, 17%, 12%);
+        /* animation-name: MinutesTimerMoving; */
+        animation-timing-function: ease-out;
+        animation-duration: 1000ms;
+        transform-origin: 100% 100%;
+        transform-style: preserve-3d;
+    }
+    @keyframes MinutesTimerMoving {  
+        100% {
+            transform: rotateX(-180deg) translateY(1px);
+        }
+    }
+    @keyframes MinutesTimerIdle {
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+    #minutes .id2 .front_number_upper {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        transform: translateZ(1px);
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        /* background-color: darkgreen; */
+        overflow: hidden;
+    }
+    #minutes .id2 .back_number_lower {
+        position: absolute;
+        top: 0px;
+        width: calc(100% - 1px);
+        height: 100%;
+        transform: translateZ(-1px) rotateX(180deg);
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        /* background-color: darkorange; */
+        overflow: hidden;
+    }
+    #minutes .id3 {
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 45%;
+        z-index: 7;
+        overflow: hidden;
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        border-top: 2px solid hsl(234, 17%, 12%);
+    }
+    #minutes .lower_number {
+        text-align: center;  
+        margin: auto 0;
+        transform: translateY(-1.14ch);
+    }
+    #minutes .upper_number {
+        text-align: center;
+        margin: auto 0;
+        transform: translateY(0.1ch);
+    }
+
+
+    /* seconds */
+    #seconds{
+        border-radius: 20px;
+        background-color: hsl(234, 17%, 12%);
+        width: 20vw;
+        height: 100%;
+        position: relative;
+        font-size: 15vw;
+        font-weight: 700;
+        perspective: 500px;
+        color: hsl(345, 95%, 68%);
+    }
+    #seconds .id1 {
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 0%;
+        align-items: center;
+        z-index: 5;
+        overflow: hidden;   
+    }
+    #seconds .id2 {
+        position: relative;
+        width: 100%;
+        height: 45%;
+        top: 0%;
+        border-radius: 20px 20px 0 0 ;
+        z-index: 10;
+        border-bottom: 2px solid hsl(234, 17%, 12%);
+        /* animation-name: SecondsTimerMoving; */
+        animation-timing-function: ease-out;
+        animation-duration: 400ms;
+        transform-origin: 100% 100%;
+        transform-style: preserve-3d;
+    }
+    @keyframes SecondsTimerMoving {  
+        100% {
+            transform: rotateX(-180deg) translateY(1px);
+        }
+    }
+    @keyframes SecondsTimerIdle {
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+    #seconds .id2 .front_number_upper {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        transform: translateZ(1px);
+        background-color: hsl(236, 30%, 20%);
+        border-radius: 20px 20px 0 0;
+        /* background-color: darkgreen; */
+        overflow: hidden;
+    }
+    #seconds .id2 .back_number_lower {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        transform: translateZ(-1px) rotateX(180deg);
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        /* background-color: darkorange; */
+        overflow: hidden;
+    }
+    #seconds .id3 {
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        top: 45%;
+        z-index: 7;
+        overflow: hidden;
+        background-color: hsl(236, 21%, 26%);
+        border-radius: 0 0 20px 20px;
+        border-top: 2px solid hsl(234, 17%, 12%);
+    }
+    #seconds .lower_number {
+        text-align: center;  
+        margin: auto 0;
+        transform: translateY(-1.14ch);
+    }
+    #seconds .upper_number {
+        text-align: center;
+        margin: auto 0;
+        transform: translateY(0.1ch);
+    }
+
+
+    #markings{
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 12vw;
+        display: grid;
+        grid-template-columns: repeat(4, 20vw);
+        grid-template-rows: 1fr;
+        column-gap: 3vw;
+        font-size: 3vw;
+        color: hsla(0, 0%, 100%, 0.678);
+        text-align: center;
+        font-weight: bold;
+    }
+
+
+    /* This is the footer region */
+    #footer{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr repeat(3, minmax(24px ,3vw)) 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 1vw;
+        position: absolute;
+        bottom: 0%;
+        height: 15vh;
+        align-items: center;
+        background-image: url('/home/mylaptop/Coding/Challenges /Challenge 4/launch-countdown-timer-main/images/pattern-hills.svg');
+    }
+    #fbLOGO {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    #pnLOGO {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    #igLOGO {
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+    #footer svg:hover {
+        cursor: pointer;
+    }
+    #footer svg:hover path{
+        fill:#fb6087;
+    }
+}
