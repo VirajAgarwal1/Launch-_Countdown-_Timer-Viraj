@@ -459,7 +459,7 @@ body {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr repeat(3, minmax(24px ,3vw)) 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         column-gap: 1vw;
         position: absolute;
         bottom: 0%;
@@ -468,17 +468,22 @@ body {
         /* background-size: 100% 100%; */
         background-image: url('https://virajagarwal1.github.io/Launch-_Countdown-_Timer-Viraj/pattern-hills.svg');
     }
+    .attribution{
+        grid-column: 1/6;
+        grid-row: 3/4;
+        text-align: center;
+    }
     #fbLOGO {
         grid-column: 2/3;
-        grid-row: 1/2;
+        grid-row: 2/3;
     }
     #pnLOGO {
         grid-column: 3/4;
-        grid-row: 1/2;
+        grid-row: 2/3;
     }
     #igLOGO {
         grid-column: 4/5;
-        grid-row: 1/2;
+        grid-row: 2/3;
     }
     #footer svg:hover {
         cursor: pointer;
@@ -939,7 +944,7 @@ body {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr repeat(3, minmax(24px ,3vw)) 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         column-gap: 3.5vw;
         position: absolute;
         bottom: 0%;
@@ -947,17 +952,22 @@ body {
         align-items: center;
         background-image: url('https://virajagarwal1.github.io/Launch-_Countdown-_Timer-Viraj/pattern-hills.svg');
     }
+    .attribution{
+        grid-column: 1/6;
+        grid-row: 3/4;
+        text-align: center;
+    }
     #fbLOGO {
         grid-column: 2/3;
-        grid-row: 1/2;
+        grid-row: 2/3;
     }
     #pnLOGO {
         grid-column: 3/4;
-        grid-row: 1/2;
+        grid-row: 2/3;
     }
     #igLOGO {
         grid-column: 4/5;
-        grid-row: 1/2;
+        grid-row: 2/3;
     }
     #footer svg:hover {
         cursor: pointer;
